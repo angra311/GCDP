@@ -1,8 +1,12 @@
 ## Read the feature names from file
-feature_names <- read.table ("UCI HAR Dataset/features.txt", row.names = 1)
+feature_names <- read.table ("UCI HAR Dataset/features.txt",  as.is=TRUE, 
+                             row.names = 1)
+feature_names[,1] <- make.names(feature_names[,1])
 ## extract the indices of the ones we want to keep
-desired_features<-feature_names[c(grep ("mean", feature_names,ignore.case=TRUE),
-                                  grep("std",feature_names, ignore.case=TRUE)),1]
+mi <- grep ("mean",feature_names[,1],ignore.case=TRUE)
+si <- grep ("std",feature_names[,1],ignore.case=TRUE)
+
+desired_features<-feature_names[c(mi,si),1]
 
 
 ## Load training data
@@ -44,5 +48,5 @@ merged_data <- rbind (xy_train, xy_test)
 summary <-aggregate (. ~ Activity+Subject, data=merged_data, mean)
 
 ## clean up
-rm (merged_data, xy_test, xy_train, x_test, x_train, y_test, y_train, 
-    subjects_test, subjects_train)
+rm (merged_data, xy_test, xy_train, x_test, x_train, y_test, y_train, subjects_test, 
+    subjects_train)
