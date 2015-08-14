@@ -64,7 +64,117 @@ img {
 </div>
 
 
-<p>This codebook is the data dictionary for the Course Project</p>
+<p>This codebook is the data dictionary for the Course Project. It is derived from the data available <a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">here</a>. A description of that data is available <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">here</a>. The source data consists of smartphone data collected while 30 human subjects engaged in 6 types of activities. This dataset provides average values for each subject/activity pair across many of the variables. A description of the variables is given below.</p>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<div id="labels" class="section level3">
+<h3>Labels</h3>
+<ul>
+<li>“Activity”</li>
+</ul>
+<p>Labelled activities, based on human observation of video records.</p>
+<ol style="list-style-type: decimal">
+<li>WALKING</li>
+<li>WALKING_UPSTAIRS</li>
+<li>WALKING_DOWNSTAIRS</li>
+<li>SITTING</li>
+<li>STANDING</li>
+<li>LAYING</li>
+</ol>
+<ul>
+<li>“Subject”</li>
+</ul>
+<p>Integer 1-30 indicating which human subject generated the data</p>
+</div>
+<div id="sensors" class="section level3">
+<h3>Sensors</h3>
+<p>Mean and Standard deviation data from sensors. The variables collected below are all from the original data set with “mean” or “std” in the variable name. All variables are unitless and normalized to [-1, 1]. Groups with {XYZ} suffixes are triaxial measurements. For each type of sensor, a mean (mean) and standard deviation (std) is given. Direct measurements have a name prefix of “t”. For some of the measurements, a Fourier Transform was performed, creating spectrum measurements that have a name prefix of “f”</p>
+<ul>
+<li>“tBodyAcc.mean…X” “tBodyAcc.mean…Y” “tBodyAcc.mean…Z”</li>
+<li>“tBodyAcc.std…X” “tBodyAcc.std…Y” “tBodyAcc.std…Z”</li>
+<li>“fBodyAcc.mean…X” “fBodyAcc.mean…Y” “fBodyAcc.mean…Z”</li>
+<li>“fBodyAcc.std…X” “fBodyAcc.std…Y” “fBodyAcc.std…Z”</li>
+</ul>
+<p>Non-gravity body acceleration</p>
+<ul>
+<li>“tGravityAcc.mean…X” “tGravityAcc.mean…Y” “tGravityAcc.mean…Z”</li>
+<li>“tGravityAcc.std…X” “tGravityAcc.std…Y” “tGravityAcc.std…Z”</li>
+</ul>
+<p>Gravity acceleration</p>
+<ul>
+<li>“tBodyAccJerk.mean…X” “tBodyAccJerk.mean…Y” “tBodyAccJerk.mean…Z”</li>
+<li>“tBodyAccJerk.std…X” “tBodyAccJerk.std…Y” “tBodyAccJerk.std…Z”</li>
+<li>“fBodyAccJerk.mean…X” “fBodyAccJerk.mean…Y” “fBodyAccJerk.mean…Z”</li>
+<li>“fBodyAccJerk.std…X” “fBodyAccJerk.std…Y” “fBodyAccJerk.std…Z”</li>
+</ul>
+<p>First derivative of body acceleration</p>
+<ul>
+<li>“tBodyGyro.mean…X” “tBodyGyro.mean…Y” “tBodyGyro.mean…Z”</li>
+<li>“tBodyGyro.std…X” “tBodyGyro.std…Y” “tBodyGyro.std…Z”</li>
+<li>“fBodyGyro.mean…X” “fBodyGyro.mean…Y” “fBodyGyro.mean…Z”</li>
+<li>“fBodyGyro.std…X” “fBodyGyro.std…Y” “fBodyGyro.std…Z”</li>
+</ul>
+<p>Orientation</p>
+<ul>
+<li>“tBodyGyroJerk.mean…X” “tBodyGyroJerk.mean…Y” “tBodyGyroJerk.mean…Z”</li>
+<li>“tBodyGyroJerk.std…X” “tBodyGyroJerk.std…Y” “tBodyGyroJerk.std…Z”</li>
+</ul>
+<p>First derivative of orientation acceleration</p>
+<ul>
+<li>“tBodyAccMag.mean..”</li>
+<li>“tBodyAccMag.std..”</li>
+<li>“fBodyAccMag.mean..”</li>
+<li>“fBodyAccMag.std..”</li>
+</ul>
+<p>Magnitude of non-gravity body acceleration</p>
+<ul>
+<li>“tGravityAccMag.mean..”</li>
+<li>“tGravityAccMag.std..”</li>
+</ul>
+<p>Magnitude of gravity acceleration</p>
+<ul>
+<li>“tBodyAccJerkMag.mean..”</li>
+<li>“tBodyAccJerkMag.std..”</li>
+<li>“fBodyBodyAccJerkMag.mean..”</li>
+<li>“fBodyBodyAccJerkMag.std..”</li>
+</ul>
+<p>Magnitude of first derivative of acceleration</p>
+<ul>
+<li>“tBodyGyroMag.mean..”</li>
+<li>“tBodyGyroMag.std..”</li>
+<li>“fBodyBodyGyroMag.mean..”</li>
+<li>“fBodyBodyGyroMag.std..”</li>
+</ul>
+<p>Magnitude of orientation change</p>
+<ul>
+<li>“tBodyGyroJerkMag.mean..”</li>
+<li>“tBodyGyroJerkMag.std..”</li>
+<li>“fBodyBodyGyroJerkMag.mean..”</li>
+<li>“fBodyBodyGyroJerkMag.std..”</li>
+</ul>
+<p>Magnitude of first derivative of orientation change</p>
+<ul>
+<li>“angle.tBodyAccMean.gravity.”</li>
+</ul>
+<p>Angle between gravity and body acceleration</p>
+<ul>
+<li>“angle.tBodyAccJerkMean..gravityMean.”</li>
+</ul>
+<p>Angle between first derivative of gravity and body acceleration</p>
+<ul>
+<li>“angle.tBodyGyroMean.gravityMean.”</li>
+</ul>
+<p>Angle between body orientation and gravity</p>
+<ul>
+<li>“angle.tBodyGyroJerkMean.gravityMean.”</li>
+</ul>
+<p>Angle between first derivative of body orientation and gravity</p>
+<ul>
+<li>“angle.X.gravityMean.” “angle.Y.gravityMean.” “angle.Z.gravityMean.”</li>
+</ul>
+<p>X,Y,Z components of the angle of gravity</p>
+</div>
+</div>
 
 
 </div>

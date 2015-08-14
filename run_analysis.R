@@ -3,8 +3,8 @@ feature_names <- read.table ("UCI HAR Dataset/features.txt",  as.is=TRUE,
                              row.names = 1)
 feature_names[,1] <- make.names(feature_names[,1])
 ## extract the indices of the ones we want to keep
-mi <- grep ("mean",feature_names[,1],ignore.case=TRUE)
-si <- grep ("std",feature_names[,1],ignore.case=TRUE)
+mi <- grep ("mean\\.",feature_names[,1],ignore.case=TRUE)
+si <- grep ("std\\.",feature_names[,1],ignore.case=TRUE)
 
 desired_features<-feature_names[c(mi,si),1]
 
